@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Add Page </h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="nickname" class="form-label">Nickname</label>
+      <input class="form-control" id="nickname" name="nick">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Tweet</label>
+      <input type="text" class="form-control" id="message" name="tweet">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Share Tweet</button>
+  </form>
+{% endblock  %}
