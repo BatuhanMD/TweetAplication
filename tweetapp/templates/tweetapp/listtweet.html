@@ -5,11 +5,14 @@
     {% for tweet in tweets  %}
         <div class="card" style="padding:10px">
             <div class="card-header" style="background-color: cornflowerblue;">
-                <h4><b>{{tweet.nickname}}</b></h4>
+                <h4><b>{{tweet.username}}</b></h4>
             </div>
             <div class="card-body">
                 <p class="card-text">{{tweet.message}}</p>
               </div>
+              {% if tweet.username == user %}
+              <a href="{% url "tweetapp:deletetweet" id=tweet.id %}" class = "btn btn-danger"> Delete </a>
+              {% endif %}
         </div>
     {% endfor %}
     </div>

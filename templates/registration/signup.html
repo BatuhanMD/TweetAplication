@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+        <form method = "POST" action="">
+            {% csrf_token %}
+            {% for field in form  %}
+            <div class="mb-3">
+                {{field.label_tag}}
+                {{field}}
+            </div>
+            {% endfor %}
+        <button type="submit" class="btn btn-primary" value="signup"> Sign Up </button>
+        </form>
+    
+{% endblock content %}
+
+
+
