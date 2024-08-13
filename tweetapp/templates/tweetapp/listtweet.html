@@ -4,7 +4,7 @@
 <h1> List Page </h1>
 <ul>
     {% for tweet in tweets  %}
-    <li>{{tweet}}</li>
+    <li><h3>{{tweet.nickname}} :  {{tweet.message}} </h3> </li>
     {% endfor %}
 </ul>
 {% endblock  %}
